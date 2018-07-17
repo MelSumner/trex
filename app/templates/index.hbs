@@ -1,0 +1,17 @@
+{{outlet}}
+<h1>They call me Mr. Buzz</h1>
+<ul class="list">
+{{#each (repeat 100) as |list-item index|}}
+  <li class="list-item">
+    {{#if (eq (mod index 15) 0 )}}
+      FizzBuzz  
+    {{else if ( eq (mod index 5) 0 )}}
+      Buzz
+    {{else if ( eq (mod index 3) 0 )}}
+      Fizz
+    {{else}}
+      {{index}}
+    {{/if}}
+  </li>
+{{/each}}
+</ul>
